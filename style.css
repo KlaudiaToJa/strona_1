@@ -20,7 +20,7 @@ body{
     align-items: center;
     background: linear-gradient(-45deg, rgb(229, 184, 255) 0%, hsla(196, 100%, 88%, 1) 50%, rgb(233, 195, 255));
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 7s ease infinite;
 }
 
 @keyframes gradient {
@@ -90,6 +90,7 @@ hr{
     padding: 10px 25px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
+    font-size: 14px;
     background: transparent;
     cursor: url('kursorBTS.png'), pointer;
     transition: all 0.3s ease;
@@ -289,6 +290,8 @@ span{
 
 h2{
     color: rgb(73, 18, 117);
+    margin: 0;
+    padding-bottom: 15px;
 }
 
 
@@ -302,6 +305,10 @@ h2{
     margin-bottom: 65px;
 }
 
+.randomTitle{
+    padding-top: 20px;
+}
+
 .randomContent{
     padding-bottom: 25px;
     display: flex;
@@ -311,10 +318,33 @@ h2{
 }
 
 .randomField{
-    max-width: 300px;
+    width: 500px;
+    height: 40px;
     margin: 20px 20px 10px 20px;
+    border: black solid 1px;
+    font-size: 17px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(71, 6, 136);
 }
 
+.randomButton{
+    border: none;
+    background: rgb(238, 208, 255) 3px;
+    text-decoration: none;
+    padding: 7px 14px;
+    cursor: url('kursorBTS.png'), pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: rgb(63, 11, 70);
+}
+
+.randomButton:hover{
+    background: transparent;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: solid  hsla(278, 100%, 77%, 1) 2px;
+}
 
 
 
