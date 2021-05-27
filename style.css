@@ -8,14 +8,33 @@ body{
 
 
 
+
 /* GÓRNA CZĘŚĆ STRONY */
 
 
 
 .header{
     text-align: center;
-    background: rgb(249, 239, 255);
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background: linear-gradient(-45deg, rgb(229, 184, 255) 0%, hsla(196, 100%, 88%, 1) 50%, rgb(233, 195, 255));
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .pageTitle{
@@ -25,8 +44,6 @@ body{
 }
 
 .upPhoto{
-    /* max-width: 700px;
-    border-radius: 10%; */
     max-width: 700px;
     box-shadow: 0px -10px 20px rgb(207, 195, 225);
     color:white;
@@ -36,7 +53,22 @@ body{
     border-bottom-right-radius:0px;
 }
 
+hr{
+    margin: 0;
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(162, 83, 201, 0), rgba(155, 44, 192, 0.75), rgba(162, 83, 201, 0));
+}
 
+/* TYTUŁ MENU */ 
+
+.menuTitle{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(49, 12, 80);
+    font-size: 20px;
+    padding-top: 20px;
+}
 
 
 /* MENU */
@@ -50,12 +82,6 @@ body{
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
-}
-
-.menuTitle{
-    margin-top: 20px;
-    text-align: center;
-    color: rgb(49, 12, 80);
 }
 
 .album{
