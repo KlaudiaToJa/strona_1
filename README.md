@@ -1,2 +1,2 @@
-# strona_1
-strona testowa
+# strona_nr1
+Moja pierwsza autorska strona internetowa
