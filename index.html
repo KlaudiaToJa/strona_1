@@ -8,7 +8,8 @@
         <script src="https://unpkg.com/vue"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="titles.js"></script>
-        <script src="vue.js" defer></script>
+        <script src="randomChoice.js" defer></script>
+        <script src="biography.js" defer></script>
     </head>
 
     <body>
@@ -134,6 +135,48 @@
             </div>
             <hr/>
         </div>
+
+
+
+
+        <div id="biography" class="biography">
+            <div class="biographyText">
+                {{ numberMember }}
+                <h2 class="biographyTitle">Gallery</h2>
+                <span class="biographyInfo">Do you know BTS? You can read about their story by clicking pictures.</span>
+            </div>
+
+            <div class="biographyInformation">
+                <div @click="memberChange(0)" class="member BTS">
+                    <img class="bioPhoto" src="groupPhoto.jpg"/>
+                </div>
+                <!-- fajnie by było jakby po kliknięciu obrazka wyrzucała się strzałka. Grupowe zdjęcie to strzalka w prawo i po prawej opis, a reszta opis na dole i strzałki od ich zdjęć na dół. wtedy byloby to ladne takie. -->
+                <div class="individualMembers">
+                    <div @click="memberChange(1)" class="member KimNamjoon">
+                        <img class="bioPhoto" src="rm.jpeg"/>
+                    </div>
+                    <div @click="memberChange(2)" class="member KimSeokjin">
+                        <img class="bioPhoto" src="jin.JPG"/>
+                    </div>
+                    <div @click="memberChange(3)" class="member MinYoongi">
+                        <img class="bioPhoto" src="suga.jpg"/>
+                    </div>
+                    <div @click="memberChange(4)" class="member JungHoseok">
+                        <img class="bioPhoto" src="jHope.jpg"/>
+                    </div>
+                    <div @click="memberChange(5)" class="member ParkJimin">
+                        <img class="bioPhoto" src="jimin.jpeg"/>
+                    </div>
+                    <div @click="memberChange(6)" class="member KimTaehyung">
+                        <img class="bioPhoto" src="v.jpeg"/>
+                    </div>
+                    <div @click="memberChange(7)" class="member JeonJungkook">
+                        <img class="bioPhoto" src="jungkook.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 

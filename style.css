@@ -313,7 +313,7 @@ h2{
 /* RANDOM SONG */
 
 .randomSong{
-    margin-bottom: 65px;
+    margin-bottom: 30px;
 }
 
 .randomTitle{
@@ -356,6 +356,48 @@ h2{
     padding: 7px 14px;
     border: solid  hsla(278, 100%, 77%, 1) 2px;
 }
+
+
+
+
+
+
+.biography{
+    display: flex;
+    flex-direction: column;
+    /* text-align:justify; */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.biographyTitle{
+    text-align: center;
+}
+
+.biographyText{
+    max-width: 1000px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.biographyInformation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.individualMembers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bioPhoto{
+    height: 300px;
+    margin: 3px;
+}
+
+
 
 
 
