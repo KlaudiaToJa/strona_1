@@ -92,7 +92,7 @@ hr{
     font-weight: 500;
     font-size: 14px;
     background: transparent;
-    cursor: url('kursorBTS.png'), pointer;
+    /* cursor: url('kursorBTS.png'), pointer; */
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
@@ -147,6 +147,17 @@ hr{
     background: transparent;
     color: #76aef1;
     box-shadow: none;
+}
+
+.albumBtnText{
+    cursor: url('kursorBTS.png'), pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.album:hover > .albumBtnText{ 
+    /* change one element after hovering another */
+    color: #76aef1;
 }
 
 .album:hover:before {
@@ -329,7 +340,7 @@ h2{
 }
 
 .randomButton{
-    border: none;
+    border: solid white 2px;
     background: rgb(238, 208, 255) 3px;
     text-decoration: none;
     padding: 7px 14px;
