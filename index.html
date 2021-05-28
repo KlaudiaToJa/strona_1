@@ -21,10 +21,8 @@
             <img class="upPhoto" src="upPhoto.jpg" width=100%/>
         </div>
 
-
         
         <hr/>
-
 
         
         <h2 class="menuTitle">Discography:</h2>
@@ -77,14 +75,14 @@
                 <a class="albumBtnText" href="https://www.youtube.com/watch?v=-5q5mZbe3V8&list=OLAK5uy_lrj6FwTFFdXG2HCmEMDQWzRDrBU8NLdhw">BE</a>    
             </button>
             <button class="album" type="button">
-                <a class="albumBtnText" href="https://www.youtube.com/watch?v=WMweEpGlu_U">Butter</a>    
+                <a class="albumBtnText cursorBTS" href="https://www.youtube.com/watch?v=WMweEpGlu_U">Butter</a>    
             </button>
         </div>
 
 
 
         <div class="center">
-            <div class="centralElements sideElement">
+            <div class="animatedBorder sideElement">
                 <div class="elementsContent">
                     <span>Smooth like butter
                         Like a criminal undercover
@@ -98,19 +96,19 @@
                     </span>
                 </div>
             </div>
-            <div class="centralElements centralElement">
+            <div class="animatedBorder centralElement">
                 <div class="elementsContent">
                     <h2>The latest BTS' big hit!</h2>
                     <span>Do you know Butter? Well, you should! Boys came up with a song that will take you to another world. 
                         Just click the link below:
                     </span>
                     <span class="centralButton">
-                        <a class="link" href="https://www.youtube.com/watch?v=WMweEpGlu_U">Butter</a>
+                        <a class="link cursorBTS" href="https://www.youtube.com/watch?v=WMweEpGlu_U">Butter</a>
                     </span>
                     <img class="centralPhoto" src="btsButter_photo1.png"/>
                 </div>
             </div>
-            <div class="centralElements sideElement">
+            <div class="animatedBorder sideElement">
                 <div class="elementsContent">
                     <span>Side step, right, left to my beat
                         High like the moon, rock with me, baby
@@ -131,7 +129,7 @@
                 <h2 class="randomTitle">Try random choice!</h2>
                 <span class="randomText">You have no idea which song to listen to today? Click the button below.</span>
                 <input v-model="inputModel" class="randomField" disabled></input>
-                <button @click="ClickMe" class="randomButton">Song of the Day</button>
+                <button @click="ClickMe" class="randomButton cursorBTS">Song of the Day</button>
             </div>
             <hr/>
         </div>
@@ -141,37 +139,95 @@
 
         <div id="biography" class="biography">
             <div class="biographyText">
-                {{ numberMember }}
                 <h2 class="biographyTitle">Gallery</h2>
                 <span class="biographyInfo">Do you know BTS? You can read about their story by clicking pictures.</span>
             </div>
 
             <div class="biographyInformation">
-                <div @click="memberChange(0)" class="member BTS">
-                    <img class="bioPhoto" src="groupPhoto.jpg"/>
+                <div class="BTS">
+                    <img @click="memberChange(0)" class="bioPhoto cursorBTS" src="groupPhoto.jpg"/>
+                    <div :class="[ numberMember == 0 ? 'bioGroup' : 'hide' ]">
+                        <img class="bioArrow" src="arrow.gif"/>
+                        <div class="bioGroupInfo animatedBorder">
+                            <span>BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan), also known as the Bangtan Boys, is a seven-member South Korean boy band that began formation in 2010 and debuted in 2013 under Big Hit Entertainment. The septet—composed of Jin, Suga, J-Hope, RM, Jimin, V, and Jungkook—co-writes and co-produces much of their own output.</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- fajnie by było jakby po kliknięciu obrazka wyrzucała się strzałka. Grupowe zdjęcie to strzalka w prawo i po prawej opis, a reszta opis na dole i strzałki od ich zdjęć na dół. wtedy byloby to ladne takie. -->
                 <div class="individualMembers">
-                    <div @click="memberChange(1)" class="member KimNamjoon">
-                        <img class="bioPhoto" src="rm.jpeg"/>
+                    <div class="cursorBTS">
+                        <img @click="memberChange(1)" :class="[ {shine : numberMember == 1}, bioPhoto ]" src="rm.jpeg"/>
                     </div>
-                    <div @click="memberChange(2)" class="member KimSeokjin">
-                        <img class="bioPhoto" src="jin.JPG"/>
+                    <div class="KimSeokjin cursorBTS">
+                        <img @click="memberChange(2)" :class="[ {shine : numberMember == 2}, bioPhoto ]" src="jin.JPG"/>
                     </div>
-                    <div @click="memberChange(3)" class="member MinYoongi">
-                        <img class="bioPhoto" src="suga.jpg"/>
+                    <div class="MinYoongi cursorBTS">
+                        <img @click="memberChange(3)" :class="[ {shine : numberMember == 3}, bioPhoto ]" src="suga.jpg"/>
                     </div>
-                    <div @click="memberChange(4)" class="member JungHoseok">
-                        <img class="bioPhoto" src="jHope.jpg"/>
+                    <div class="JungHoseok cursorBTS">
+                        <img @click="memberChange(4)" :class="[ {shine : numberMember == 4}, bioPhoto ]" src="jHope.jpg"/>
                     </div>
-                    <div @click="memberChange(5)" class="member ParkJimin">
-                        <img class="bioPhoto" src="jimin.jpeg"/>
+                    <div class="ParkJimin cursorBTS">
+                        <img @click="memberChange(5)" :class="[ {shine : numberMember == 5}, bioPhoto ]" src="jimin.jpeg"/>
                     </div>
-                    <div @click="memberChange(6)" class="member KimTaehyung">
-                        <img class="bioPhoto" src="v.jpeg"/>
+                    <div class="KimTaehyung cursorBTS">
+                        <img @click="memberChange(6)" :class="[ {shine : numberMember == 6}, bioPhoto ]" src="v.jpeg"/>
                     </div>
-                    <div @click="memberChange(7)" class="member JeonJungkook">
-                        <img class="bioPhoto" src="jungkook.jpg"/>
+                    <div class="JeonJungkook cursorBTS">
+                        <img @click="memberChange(7)" :class="[ {shine : numberMember == 7}, bioPhoto ]" src="jungkook.jpg"/>
+                    </div>
+                </div>
+
+                <div id="memberInfo" :class="[ numberMember == 1 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Kim Namjoon - RM</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Kim Nam-joon (Korean: 김남준; born September 12, 1994),[1] better known by his stage name RM (formerly Rap Monster), is a South Korean rapper, songwriter and record producer. He is the leader of the South Korean boy group BTS. 
+                            
+                            In 2015, he released his first solo mixtape, RM. In October 2018, his second mixtape, Mono, was the highest-charting album by a Korean soloist on the Billboard 200 chart, having peaked at 26. He has recorded with artists such as Wale, Younha, Warren G, Gaeko, Krizz Kaliko, MFBTY, Fall Out Boy, Primary, and Lil Nas X.</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 2 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Kim Seokjin - Jin</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Kim Seok-jin (Korean: 김석진; born December 4, 1992), also known by his stage name Jin, is a South Korean singer, songwriter, and member of the South Korean boy band BTS since June 2013. Kim has co-written and released three solo tracks with BTS: "Awake" (2016), "Epiphany" (2018), and "Moon" (2020), all of which have charted on South Korea's Gaon Digital Chart. 
+                            
+                            In 2019, Kim released his first independent song, the digital track "Tonight". He also appeared on the 2016 Hwarang: The Poet Warrior Youth soundtrack alongside BTS member V. Kim has received critical praise for his falsetto and emotional range as a singer.</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 3 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Min Yoongi – Suga</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Min Yoon-gi (Korean: 민윤기; born March 9, 1993), better known by his stage names Suga (stylized as SUGA) and Agust D,[A] is a South Korean rapper, songwriter and record producer. Managed by Big Hit Music, he debuted as a member of the South Korean pop idol group BTS in 2013. 
+                            
+                            In 2016, he released his first solo mixtape, Agust D. In 2018, he re-released the mixtape for digital purchase and streaming. The reissue reached number three on Billboard's World Albums Chart. In 2020, he released his second solo mixtape, D-2. Commercially, the mixtape peaked at number 11 on the US Billboard 200, number seven on the UK Albums Chart, and number two on Australia's ARIA Album Chart. 
+                            
+                            The Korea Music Copyright Association attributes over 100 songs to Suga as a songwriter and producer, including Suran's "Wine" which peaked at number two on the Gaon Music Chart and won best Soul/R&B track of the year at the 2017 Melon Music Awards.</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 4 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Jung Hoseok – J-Hope</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Jung Ho-seok (Korean: 정호석; born February 18, 1994), better known by his stage name J-Hope (stylized as j-hope), is a South Korean rapper, songwriter, dancer, and record producer. In 2013, J-Hope made his debut as a member of South Korean boy band BTS, managed under Big Hit Music.
+                        J-Hope released his first solo mixtape, Hope World, worldwide on March 1, 2018. The album was met with a positive reception. 
+                        
+                        His debut at number 63 (and subsequent peak at number 38) made him the highest-charting solo Korean artist on the Billboard 200 at the time of the mixtape's release. On September 27, 2019, he released his song ”Chicken Noodle Soup” featuring Becky G. On October 12, 2019, the solo single debuted at No. 81 on US Billboard Hot 100, which made him the first member of BTS with a Hot 100 hit under his own name.[1]</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 5 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Park Jimin - Jimin</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Park Ji-min (Korean: 박지민; born October 13, 1995), better known mononymously as Jimin, is a South Korean singer, songwriter, and dancer. In 2013, he debuted as a member of the South Korean boy band BTS, under the record label Big Hit Entertainment.</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 6 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Kim Taehyung - V</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Kim Tae-hyung (Korean: 김태형; born December 30, 1995),[1] also known by his stage name V, is a South Korean singer, songwriter, and actor. He is a vocalist of the South Korean boy group BTS.</span>
+                    </div>
+                </div>
+                <div id="memberInfo" :class="[ numberMember == 7 ? 'member' : 'hide' ]">
+                    <h2 class="memberName">Jeon Jungkook - Jungkook</h2>
+                    <div class="bioGroupInfo animatedBorder">
+                        <span>Jeon Jung-kook (Korean: 전정국; born September 1, 1997), better known mononymously as Jungkook, is a South Korean singer and songwriter. He is the youngest member of and vocalist in the South Korean boy band BTS.[2]</span>
                     </div>
                 </div>
             </div>
@@ -184,22 +240,22 @@
             <div class="bottomContent">
                 <div class="bottomIcon">
                     <a href="https://twitter.com/bts_twt">
-                        <img class="bottomPhoto" src="tt.png">
+                        <img class="bottomPhoto cursorBTS" src="tt.png">
                     </a>
                 </div>
                 <div class="bottomIcon">
                     <a href="https://www.facebook.com/bangtan.official">
-                        <img class="bottomPhoto" src="fb.png">
+                        <img class="bottomPhoto cursorBTS" src="fb.png">
                     </a>
                 </div>
                 <div class="bottomIcon">
                     <a href="https://ibighit.com">
-                        <img class="bottomPhoto" src="bighit.png">
+                        <img class="bottomPhoto cursorBTS" src="bighit.png">
                     </a>
                 </div>
                 <div class="bottomIcon">
                     <a href="https://www.youtube.com/user/BANGTANTV">
-                        <img class="bottomPhoto" src="yt.png">
+                        <img class="bottomPhoto cursorBTS" src="yt.png">
                     </a>
                 </div>
             </div>
