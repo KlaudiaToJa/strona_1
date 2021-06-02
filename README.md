@@ -1,2 +1,2 @@
 # strona_nr1
-Moja pierwsza autorska strona internetowa
+Jeśli nie lubisz pastelowych kolorków, lepiej nie zaglądaj :D
